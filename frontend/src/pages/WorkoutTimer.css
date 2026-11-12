@@ -1,0 +1,193 @@
+
+.timer-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+.timer-header {
+  margin-bottom: 30px;
+}
+
+.timer-header h1 {
+  color: #172554;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.timer-header p {
+  color: #64748b;
+}
+
+.timer-card {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+.timer-form {
+  display: grid;
+  gap: 10px;
+}
+
+.timer-form label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.timer-form input,
+.timer-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.timer-form input:focus,
+.timer-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.timer-display {
+  text-align: center;
+  margin: 35px 0;
+  padding: 30px 15px;
+  background: #eff6ff;
+  border-radius: 15px;
+}
+
+.timer-icon {
+  font-size: 38px;
+}
+
+.timer-display h2 {
+  font-size: 52px;
+  letter-spacing: 4px;
+  color: #1d4ed8;
+  margin: 15px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-display p {
+  color: #475569;
+  font-weight: 600;
+}
+
+.timer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.timer-actions button {
+  border: none;
+  border-radius: 9px;
+  padding: 13px 22px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.timer-actions button:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.timer-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.timer-start-btn {
+  background: #16a34a;
+}
+
+.timer-pause-btn {
+  background: #d97706;
+}
+
+.timer-resume-btn {
+  background: #2563eb;
+}
+
+.timer-stop-btn {
+  background: #dc2626;
+}
+
+.timer-success {
+  margin-top: 20px;
+  padding: 12px;
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.timer-error {
+  margin-top: 20px;
+  padding: 12px;
+  color: #991b1b;
+  background: #fee2e2;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.timer-info {
+  max-width: 650px;
+  margin: 25px auto;
+  padding: 22px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.timer-info h3 {
+  color: #334155;
+  margin-top: 0;
+}
+
+.timer-info p {
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.timer-info small {
+  color: #64748b;
+  line-height: 1.5;
+}
+
+@media (max-width: 650px) {
+  .timer-page {
+    padding: 18px;
+  }
+
+  .timer-card {
+    padding: 22px;
+  }
+
+  .timer-display h2 {
+    font-size: 38px;
+    letter-spacing: 2px;
+  }
+
+  .timer-actions {
+    flex-direction: column;
+  }
+
+  .timer-actions button {
+    width: 100%;
+  }
+}

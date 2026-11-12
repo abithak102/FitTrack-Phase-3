@@ -1,0 +1,263 @@
+
+.meals-page {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 25px;
+  color: #243047;
+}
+
+.meals-header {
+  margin-bottom: 30px;
+}
+
+.meals-header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: #172554;
+}
+
+.meals-header p {
+  color: #64748b;
+}
+
+.nutrition-summary,
+.meal-form-section,
+.meal-list-section {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.07);
+}
+
+.nutrition-summary h2,
+.meal-form-section h2,
+.meal-list-section h2 {
+  margin-bottom: 22px;
+  color: #1e293b;
+}
+
+.nutrition-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.nutrition-card {
+  padding: 22px;
+  border-radius: 13px;
+  background: #f1f5f9;
+  border-left: 5px solid #64748b;
+}
+
+.nutrition-card h3 {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #475569;
+}
+
+.nutrition-card p {
+  font-size: 27px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.nutrition-card p span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.calories-card {
+  background: #fff7ed;
+  border-color: #f97316;
+}
+
+.protein-card {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.carbs-card {
+  background: #f0fdf4;
+  border-color: #22c55e;
+}
+
+.fats-card {
+  background: #faf5ff;
+  border-color: #a855f7;
+}
+
+.meal-count {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.meal-form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meal-form-section label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.meal-form-section input,
+.meal-form-section select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.meal-form-section input:focus,
+.meal-form-section select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.meal-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.meal-input-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meal-submit-btn,
+.meal-cancel-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.meal-submit-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.meal-submit-btn:hover {
+  background: #1d4ed8;
+}
+
+.meal-cancel-btn {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.meal-success {
+  color: #15803d;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.meal-error {
+  color: #dc2626;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.meal-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.meal-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.meal-card-header {
+  margin-bottom: 15px;
+}
+
+.meal-type {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.meal-card h3 {
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.meal-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.meal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.meal-actions button {
+  padding: 9px 18px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.meal-edit-btn {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.meal-delete-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .nutrition-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .meal-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .meals-page {
+    padding: 12px;
+  }
+
+  .nutrition-grid,
+  .meal-input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nutrition-card p {
+    font-size: 23px;
+  }
+}

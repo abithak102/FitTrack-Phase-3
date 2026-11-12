@@ -5,7 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from .database import Base, engine
 from . import models
 from .auth import get_current_user
-from .routers import users, workouts, progress, goals,analytics,notifications,workout_plans,exercises,progress_comparison,streaks,badges
+from .reminder_scheduler import start_reminder_scheduler
+from .routers import users, workouts, progress, goals, analytics, notifications, workout_plans, health_sync
+from .routers import users, workouts, progress, goals,analytics,notifications,workout_plans,exercises,progress_comparison,streaks,badges,meals,water,ai_suggestions,reminders
 
 
 # Create database tables
@@ -17,7 +19,9 @@ app = FastAPI(
     description="Fitness and Workout Management Platform",
     version="1.0.0"
 )
-
+@app.on_event("startup")
+def start_scheduler():
+    start_reminder_scheduler()
 
 # CORS Configuration
 app.add_middleware(
@@ -41,6 +45,11 @@ app.include_router(exercises.router)
 app.include_router(progress_comparison.router)
 app.include_router(streaks.router)
 app.include_router(badges.router)
+app.include_router(meals.router)
+app.include_router(water.router)
+app.include_router(ai_suggestions.router)
+app.include_router(reminders.router)
+app.include_router(health_sync.router)
 @app.get("/")
 def home():
     return {

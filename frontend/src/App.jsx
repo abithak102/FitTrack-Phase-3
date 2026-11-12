@@ -13,6 +13,13 @@ import Exercises from "./pages/Exercises";
 import Streaks from "./pages/Streaks";
 import Badges from "./pages/Badges";
 import DashboardOverview from "./pages/DashboardOverview";
+import Meals from "./pages/Meals";
+import WaterTracker from "./pages/WaterTracker";
+import AIWorkoutSuggestions from "./pages/AIWorkoutSuggestions";
+import WorkoutTimer from "./pages/WorkoutTimer";
+import AdvancedAnalytics from "./pages/AdvancedAnalytics";
+import Reminders from "./pages/Reminders";
+import HealthIntegration from "./pages/HealthIntegration";
 import "./Dashboard.css";
 
 const API = "http://127.0.0.1:8000";
@@ -321,6 +328,26 @@ try {
     <h3>Workout Planner</h3>
     <p>Schedule and manage your upcoming workouts.</p>
   </Link>
+<Link to="/meals" className="feature-card">
+  <span>🍎</span>
+  <h3>Nutrition & Meals</h3>
+  <p>Track daily meals, calories and nutrition.</p>
+</Link>
+<Link to="/water" className="feature-card">
+  <span>💧</span>
+  <h3>Water Intake Tracker</h3>
+  <p>Track daily water consumption and hydration goals.</p>
+</Link>
+<Link to="/ai-suggestions" className="feature-card">
+  <span>🤖</span>
+  <h3>AI Workout Suggestions</h3>
+  <p>Get personalized workout recommendations based on your fitness activity.</p>
+</Link>
+<Link to="/workout-timer" className="feature-card">
+  <span>⏱️</span>
+  <h3>Workout Timer</h3>
+  <p>Track your workout duration and estimated calories in real time.</p>
+</Link>
 
   <Link to="/exercises" className="feature-card">
     <span>🏋️</span>
@@ -339,13 +366,21 @@ try {
     <h3>Analytics</h3>
     <p>View your fitness analytics and statistics.</p>
   </Link>
-
+<Link to="/advanced-analytics" className="feature-card">
+  <span>📈</span>
+  <h3>Advanced Analytics</h3>
+  <p>View weekly trends, goal completion and workout consistency.</p>
+</Link>
   <Link to="/profile" className="feature-card">
     <span>👤</span>
     <h3>My Profile</h3>
     <p>View and update your account details.</p>
   </Link>
-
+<Link to="/reminders" className="feature-card">
+  <span>⏰</span>
+  <h3>My Reminders</h3>
+  <p>Schedule workouts, goal deadlines and custom reminders.</p>
+</Link>
   <Link to="/notifications" className="feature-card">
     <span>🔔</span>
     <h3>Notifications</h3>
@@ -361,6 +396,11 @@ try {
     <span>🏆</span>
     <h3>Achievement Badges</h3>
     <p>View your earned badges and fitness achievements.</p>
+  </Link>
+  <Link to="/health-integration" className="feature-card">
+    <span>❤️</span>
+    <h3>Health Integration</h3>
+    <p>View health data and manage Android and Apple platform registration.</p>
   </Link>
 
 </div>
@@ -418,10 +458,26 @@ function App() {
   }
 />
 <Route
+  path="/advanced-analytics"
+  element={
+    <ProtectedRoute>
+      <AdvancedAnalytics />
+    </ProtectedRoute>
+  }
+/>
+<Route
   path="/profile"
   element={
     <ProtectedRoute>
       <Profile />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/reminders"
+  element={
+    <ProtectedRoute>
+      <Reminders />
     </ProtectedRoute>
   }
 />
@@ -465,6 +521,48 @@ function App() {
     </ProtectedRoute>
   }
 />
+<Route
+  path="/meals"
+  element={
+    <ProtectedRoute>
+      <Meals />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/water"
+  element={
+    <ProtectedRoute>
+      <WaterTracker />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/ai-suggestions"
+  element={
+    <ProtectedRoute>
+      <AIWorkoutSuggestions />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/workout-timer"
+  element={
+    <ProtectedRoute>
+      <WorkoutTimer />
+    </ProtectedRoute>
+  }
+/>
+<Route
+  path="/health-integration"
+  element={
+    <ProtectedRoute>
+      <HealthIntegration />
+    </ProtectedRoute>
+  }
+/>
+
       <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   );

@@ -1,0 +1,255 @@
+
+.water-page {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 25px;
+  color: #1e293b;
+}
+
+.water-header {
+  margin-bottom: 28px;
+}
+
+.water-header h1 {
+  font-size: 30px;
+  color: #0c4a6e;
+  margin-bottom: 8px;
+}
+
+.water-header p {
+  color: #64748b;
+}
+
+.water-summary,
+.water-form-section,
+.water-goal-section,
+.water-history-section {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.07);
+}
+
+.water-summary h2,
+.water-form-section h2,
+.water-goal-section h2,
+.water-history-section h2 {
+  margin-bottom: 22px;
+  color: #164e63;
+}
+
+.water-total {
+  text-align: center;
+  padding: 20px;
+}
+
+.water-total h3 {
+  font-size: 42px;
+  color: #0284c7;
+  margin-bottom: 8px;
+}
+
+.water-total p {
+  color: #64748b;
+}
+
+.water-progress-track {
+  width: 100%;
+  height: 18px;
+  background: #e0f2fe;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.water-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #0284c7);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.water-percentage {
+  text-align: center;
+  color: #0369a1;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.water-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  text-align: center;
+}
+
+.water-stats div {
+  background: #f0f9ff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.water-stats h3 {
+  font-size: 24px;
+  color: #0369a1;
+  margin-bottom: 8px;
+}
+
+.water-stats p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.water-form-section form,
+.water-goal-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.water-form-section label,
+.water-goal-section label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.water-form-section input,
+.water-goal-section input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.water-form-section input:focus,
+.water-goal-section input:focus {
+  outline: none;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+}
+
+.water-quick-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.water-quick-buttons button {
+  padding: 10px 18px;
+  border: 1px solid #bae6fd;
+  background: #f0f9ff;
+  color: #0369a1;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.water-quick-buttons button:hover {
+  background: #e0f2fe;
+}
+
+.water-primary-btn {
+  padding: 12px 20px;
+  background: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.water-primary-btn:hover {
+  background: #0369a1;
+}
+
+.water-record-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.water-record-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid #e0f2fe;
+  background: #f8fcff;
+  border-radius: 12px;
+}
+
+.water-record-card h3 {
+  color: #0369a1;
+  margin-bottom: 5px;
+}
+
+.water-record-card p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.water-delete-btn {
+  padding: 9px 15px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.water-delete-btn:hover {
+  background: #fecaca;
+}
+
+.water-error,
+.water-success {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.water-error {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.water-success {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+@media (max-width: 768px) {
+  .water-record-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .water-page {
+    padding: 12px;
+  }
+
+  .water-summary,
+  .water-form-section,
+  .water-goal-section,
+  .water-history-section {
+    padding: 18px;
+  }
+
+  .water-total h3 {
+    font-size: 32px;
+  }
+
+  .water-stats h3 {
+    font-size: 20px;
+  }
+}

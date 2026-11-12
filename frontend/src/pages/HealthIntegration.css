@@ -1,0 +1,218 @@
+
+.health-page {
+  padding: 25px;
+  max-width: 1200px;
+  margin: auto;
+  color: #243047;
+}
+
+.health-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.health-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.health-header p {
+  color: #64748b;
+  margin: 0;
+}
+
+.health-notice,
+.health-success,
+.health-error {
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.health-notice {
+  background: #fff7df;
+  border: 1px solid #f3d58a;
+  color: #795515;
+}
+
+.health-success {
+  background: #e8f8ef;
+  color: #176b3a;
+}
+
+.health-error {
+  background: #feecec;
+  color: #a32222;
+}
+
+.health-section {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.health-section h2 {
+  margin: 0 0 18px;
+  font-size: 20px;
+}
+
+.health-connect-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.health-connect-controls select,
+.health-sync-form input,
+.health-sync-form select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.health-page button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.health-page button:hover {
+  background: #1d4ed8;
+}
+
+.health-page button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.health-platform-grid,
+.health-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.health-platform-card,
+.health-summary-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 17px;
+  background: #f8fafc;
+}
+
+.health-platform-card h3,
+.health-summary-card h3 {
+  margin-top: 0;
+}
+
+.health-platform-card p {
+  font-size: 14px;
+  color: #475569;
+}
+
+.health-connected {
+  color: #16834a;
+}
+
+.health-disconnected {
+  color: #dc2626;
+}
+
+.health-page .health-disconnect-btn {
+  background: #dc2626;
+}
+
+.health-page .health-disconnect-btn:hover {
+  background: #b91c1c;
+}
+
+.health-sync-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+  align-items: center;
+}
+
+.health-sync-form label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.health-sync-form button {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+}
+
+.health-summary-card p {
+  font-size: 23px;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0;
+}
+
+.health-empty {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.health-table-wrapper {
+  overflow-x: auto;
+}
+
+.health-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.health-table th,
+.health-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.health-table th {
+  background: #f1f5f9;
+}
+
+.health-refresh-btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 650px) {
+  .health-page {
+    padding: 14px;
+  }
+
+  .health-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .health-connect-controls {
+    flex-direction: column;
+  }
+
+  .health-sync-form {
+    grid-template-columns: 1fr;
+  }
+
+  .health-sync-form button {
+    grid-column: auto;
+  }
+}
